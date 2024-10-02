@@ -1,2 +1,3 @@
 - [2024-10-01T21:38:08+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2024-10-02T10:43:52+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2024-10-02T12:26:23+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
