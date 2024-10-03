@@ -5,3 +5,4 @@
 - [2024-10-03T13:42:12+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2024-10-03T15:04:29+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2024-10-03T20:13:53+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2024-10-03T21:33:34+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
