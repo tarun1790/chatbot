@@ -10,3 +10,4 @@
 - [2024-10-04T15:55:04+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2024-10-07T14:46:35+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2024-10-08T10:01:48+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2024-10-08T12:09:02+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
