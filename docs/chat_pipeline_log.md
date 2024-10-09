@@ -12,3 +12,4 @@
 - [2024-10-08T10:01:48+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2024-10-08T12:09:02+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2024-10-08T19:29:57+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
+- [2024-10-09T17:00:10+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
