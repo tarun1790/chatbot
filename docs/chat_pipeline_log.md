@@ -19,3 +19,4 @@
 - [2024-10-16T12:11:21+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2024-10-17T10:36:41+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2024-10-17T11:27:07+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2024-10-17T18:21:25+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
