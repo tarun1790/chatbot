@@ -22,3 +22,4 @@
 - [2024-10-17T18:21:25+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2024-10-17T21:21:55+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2024-10-18T16:53:20+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2024-10-18T20:25:11+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
