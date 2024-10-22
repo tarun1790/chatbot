@@ -24,3 +24,4 @@
 - [2024-10-18T16:53:20+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2024-10-18T20:25:11+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2024-10-21T14:21:36+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2024-10-22T17:22:45+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
