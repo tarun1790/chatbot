@@ -27,3 +27,4 @@
 - [2024-10-22T17:22:45+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2024-10-22T21:10:11+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2024-10-23T09:31:43+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2024-10-23T10:26:31+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
