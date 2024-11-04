@@ -33,3 +33,4 @@
 - [2024-10-28T20:10:32+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2024-10-28T21:24:45+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2024-11-01T12:44:00+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2024-11-04T16:29:17+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
