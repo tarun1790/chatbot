@@ -35,3 +35,4 @@
 - [2024-11-01T12:44:00+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2024-11-04T16:29:17+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2024-11-05T21:10:44+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2024-11-08T12:00:42+05:30] style(theme): enhance conversational bubble typography and contrast styling
