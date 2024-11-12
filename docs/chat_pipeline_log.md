@@ -37,3 +37,4 @@
 - [2024-11-05T21:10:44+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2024-11-08T12:00:42+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2024-11-08T17:11:42+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2024-11-12T14:59:23+05:30] style(theme): enhance conversational bubble typography and contrast styling
