@@ -42,3 +42,4 @@
 - [2024-11-14T13:33:06+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2024-11-18T15:23:38+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2024-11-20T19:19:31+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2024-11-22T12:07:41+05:30] style(theme): enhance conversational bubble typography and contrast styling
