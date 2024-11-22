@@ -44,3 +44,4 @@
 - [2024-11-20T19:19:31+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2024-11-22T12:07:41+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2024-11-22T15:45:41+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2024-11-22T16:14:20+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
