@@ -47,3 +47,4 @@
 - [2024-11-22T16:14:20+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2024-11-22T18:31:28+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2024-11-22T20:11:51+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2024-11-23T12:58:13+05:30] style(theme): enhance conversational bubble typography and contrast styling
