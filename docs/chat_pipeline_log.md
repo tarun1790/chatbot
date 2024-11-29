@@ -54,3 +54,4 @@
 - [2024-11-28T16:11:38+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2024-11-28T18:18:34+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2024-11-28T18:46:09+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
+- [2024-11-29T12:35:52+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
