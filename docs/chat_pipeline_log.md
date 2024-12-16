@@ -59,3 +59,4 @@
 - [2024-12-04T14:22:10+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2024-12-09T13:55:02+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2024-12-12T13:18:19+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
+- [2024-12-16T14:48:02+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
