@@ -60,3 +60,4 @@
 - [2024-12-09T13:55:02+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2024-12-12T13:18:19+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2024-12-16T14:48:02+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2024-12-17T21:03:26+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
