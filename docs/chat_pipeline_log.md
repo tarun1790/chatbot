@@ -61,3 +61,4 @@
 - [2024-12-12T13:18:19+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2024-12-16T14:48:02+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2024-12-17T21:03:26+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2024-12-18T18:50:42+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
