@@ -64,3 +64,4 @@
 - [2024-12-18T18:50:42+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2024-12-18T19:07:41+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2024-12-23T15:00:51+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
+- [2024-12-23T18:59:34+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
