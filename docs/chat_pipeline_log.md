@@ -72,3 +72,4 @@
 - [2024-12-26T16:09:22+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2024-12-26T20:13:15+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2024-12-30T19:15:53+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
+- [2024-12-31T12:51:04+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
