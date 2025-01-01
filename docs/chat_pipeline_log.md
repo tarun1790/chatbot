@@ -76,3 +76,4 @@
 - [2024-12-31T16:17:26+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2024-12-31T18:43:12+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-01-01T14:24:22+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-01-01T14:35:58+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
