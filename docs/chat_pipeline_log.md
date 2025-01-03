@@ -78,3 +78,4 @@
 - [2025-01-01T14:24:22+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-01-01T14:35:58+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-01-01T16:59:32+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-01-03T12:29:52+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
