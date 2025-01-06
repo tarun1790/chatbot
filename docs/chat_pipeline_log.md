@@ -80,3 +80,4 @@
 - [2025-01-01T16:59:32+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-01-03T12:29:52+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-01-03T16:30:50+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-01-06T18:34:28+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
