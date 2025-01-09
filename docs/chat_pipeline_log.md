@@ -85,3 +85,4 @@
 - [2025-01-07T18:07:00+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-01-08T10:03:06+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-01-08T21:03:18+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-01-09T19:02:29+05:30] style(theme): enhance conversational bubble typography and contrast styling
