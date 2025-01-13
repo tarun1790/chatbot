@@ -88,3 +88,4 @@
 - [2025-01-09T19:02:29+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-01-09T21:47:21+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-01-10T17:47:08+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-01-13T20:49:21+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
