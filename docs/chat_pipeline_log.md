@@ -93,3 +93,4 @@
 - [2025-01-15T09:58:03+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-01-15T19:04:23+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-01-16T09:25:05+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-01-16T10:07:33+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
