@@ -95,3 +95,4 @@
 - [2025-01-16T09:25:05+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-01-16T10:07:33+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-01-17T09:45:01+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-01-17T11:10:47+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
