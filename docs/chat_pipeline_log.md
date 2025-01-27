@@ -100,3 +100,4 @@
 - [2025-01-21T11:30:35+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-01-23T21:50:45+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-01-24T10:06:28+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
+- [2025-01-27T15:41:02+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
