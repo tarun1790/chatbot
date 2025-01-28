@@ -102,3 +102,4 @@
 - [2025-01-24T10:06:28+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-01-27T15:41:02+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-01-27T18:42:03+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-01-28T15:44:10+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
