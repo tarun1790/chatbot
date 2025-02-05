@@ -109,3 +109,4 @@
 - [2025-01-31T21:31:37+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-02-04T15:40:07+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-02-04T19:34:45+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-02-05T16:01:22+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
