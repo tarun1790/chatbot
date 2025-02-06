@@ -110,3 +110,4 @@
 - [2025-02-04T15:40:07+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-02-04T19:34:45+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-02-05T16:01:22+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-02-06T10:15:40+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
