@@ -113,3 +113,4 @@
 - [2025-02-06T10:15:40+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-02-07T14:31:10+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-02-10T20:59:08+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
+- [2025-02-10T21:03:56+05:30] style(theme): enhance conversational bubble typography and contrast styling
