@@ -117,3 +117,4 @@
 - [2025-02-11T14:17:01+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-02-12T15:11:19+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-02-12T15:22:42+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-02-12T18:06:10+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
