@@ -123,3 +123,4 @@
 - [2025-02-14T12:41:47+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-02-14T14:25:51+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-02-16T10:56:48+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-02-18T09:17:33+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
