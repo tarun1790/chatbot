@@ -126,3 +126,4 @@
 - [2025-02-18T09:17:33+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-02-18T16:10:25+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-02-19T15:11:07+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-02-19T20:40:54+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
