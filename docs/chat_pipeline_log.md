@@ -134,3 +134,4 @@
 - [2025-03-03T14:15:55+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-03-04T14:24:26+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-03-06T10:51:03+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-03-06T19:19:31+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
