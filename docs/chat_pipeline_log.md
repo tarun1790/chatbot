@@ -142,3 +142,4 @@
 - [2025-03-12T15:56:41+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-03-16T16:22:37+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-03-17T18:12:12+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-03-18T09:51:40+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
