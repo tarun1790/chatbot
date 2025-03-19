@@ -144,3 +144,4 @@
 - [2025-03-17T18:12:12+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-03-18T09:51:40+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-03-18T13:11:38+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-03-19T16:47:08+05:30] style(theme): enhance conversational bubble typography and contrast styling
