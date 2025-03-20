@@ -145,3 +145,4 @@
 - [2025-03-18T09:51:40+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-03-18T13:11:38+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-03-19T16:47:08+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-03-20T10:04:11+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
