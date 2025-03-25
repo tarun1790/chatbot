@@ -149,3 +149,4 @@
 - [2025-03-20T20:28:13+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-03-21T11:07:34+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-03-24T12:36:24+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
+- [2025-03-25T09:27:55+05:30] style(theme): enhance conversational bubble typography and contrast styling
