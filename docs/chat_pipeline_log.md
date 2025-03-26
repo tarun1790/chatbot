@@ -152,3 +152,4 @@
 - [2025-03-25T09:27:55+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-03-25T10:12:02+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-03-25T10:30:36+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
+- [2025-03-26T17:01:13+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
