@@ -155,3 +155,4 @@
 - [2025-03-26T17:01:13+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-03-28T10:52:27+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-03-28T14:50:07+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
+- [2025-03-31T16:19:33+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
