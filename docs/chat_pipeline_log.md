@@ -159,3 +159,4 @@
 - [2025-04-01T14:05:10+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-04-01T15:09:08+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-04-06T17:42:10+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
+- [2025-04-07T12:51:51+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
