@@ -164,3 +164,4 @@
 - [2025-04-10T12:46:51+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-04-10T13:41:00+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-04-10T14:38:02+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-04-10T20:07:04+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
