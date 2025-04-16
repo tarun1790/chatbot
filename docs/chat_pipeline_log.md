@@ -168,3 +168,4 @@
 - [2025-04-11T19:25:09+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-04-14T09:09:05+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-04-15T09:42:14+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-04-16T15:51:59+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
