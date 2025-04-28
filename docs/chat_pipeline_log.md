@@ -182,3 +182,4 @@
 - [2025-04-25T14:18:12+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-04-25T15:27:18+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-04-25T20:59:16+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-04-28T15:13:56+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
