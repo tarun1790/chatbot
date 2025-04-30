@@ -187,3 +187,4 @@
 - [2025-04-28T21:24:54+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-04-29T17:02:13+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-04-29T19:05:11+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-04-30T11:43:11+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
