@@ -192,3 +192,4 @@
 - [2025-05-05T21:09:57+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-05-06T13:15:21+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-05-06T14:02:29+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-05-06T15:24:18+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
