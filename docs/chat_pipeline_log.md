@@ -195,3 +195,4 @@
 - [2025-05-06T15:24:18+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-05-08T13:12:02+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-05-13T12:11:54+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-05-15T11:32:35+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
