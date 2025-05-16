@@ -198,3 +198,4 @@
 - [2025-05-15T11:32:35+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-05-15T17:39:48+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-05-15T17:47:34+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
+- [2025-05-16T10:32:55+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
