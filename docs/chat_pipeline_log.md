@@ -200,3 +200,4 @@
 - [2025-05-15T17:47:34+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-05-16T10:32:55+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-05-22T12:47:32+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-06-02T09:34:44+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
