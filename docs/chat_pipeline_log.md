@@ -201,3 +201,4 @@
 - [2025-05-16T10:32:55+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-05-22T12:47:32+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-06-02T09:34:44+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-06-04T11:48:45+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
