@@ -207,3 +207,4 @@
 - [2025-06-05T14:50:52+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-06-05T18:08:10+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-06-09T21:34:59+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
+- [2025-06-10T11:38:59+05:30] style(theme): enhance conversational bubble typography and contrast styling
