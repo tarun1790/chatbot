@@ -211,3 +211,4 @@
 - [2025-06-10T15:45:01+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-06-13T12:01:07+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-06-17T09:45:11+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-06-18T10:37:30+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
