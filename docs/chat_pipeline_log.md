@@ -215,3 +215,4 @@
 - [2025-06-18T16:33:51+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-06-19T10:28:49+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-06-19T16:42:47+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
+- [2025-06-20T12:15:39+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
