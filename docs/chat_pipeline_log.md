@@ -216,3 +216,4 @@
 - [2025-06-19T10:28:49+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-06-19T16:42:47+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-06-20T12:15:39+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
+- [2025-06-20T13:15:43+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
