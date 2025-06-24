@@ -218,3 +218,4 @@
 - [2025-06-20T12:15:39+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-06-20T13:15:43+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-06-24T09:51:07+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-06-24T09:56:53+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
