@@ -226,3 +226,4 @@
 - [2025-06-26T12:08:01+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-06-26T15:16:49+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-06-26T18:22:02+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
+- [2025-06-26T19:37:41+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
