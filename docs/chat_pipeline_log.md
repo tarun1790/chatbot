@@ -223,3 +223,4 @@
 - [2025-06-24T13:49:52+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-06-26T10:35:33+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-06-26T11:38:53+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-06-26T12:08:01+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
