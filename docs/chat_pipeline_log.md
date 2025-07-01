@@ -228,3 +228,4 @@
 - [2025-06-26T18:22:02+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-06-26T19:37:41+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-07-01T17:51:13+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-07-01T20:22:35+05:30] style(theme): enhance conversational bubble typography and contrast styling
