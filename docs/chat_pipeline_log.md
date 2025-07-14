@@ -238,3 +238,4 @@
 - [2025-07-11T10:08:35+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-07-11T21:34:33+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-07-14T15:08:29+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-07-14T16:56:15+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
