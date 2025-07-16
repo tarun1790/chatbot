@@ -243,3 +243,4 @@
 - [2025-07-15T13:28:49+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-07-15T13:42:49+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-07-15T17:15:08+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
+- [2025-07-16T13:31:05+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
