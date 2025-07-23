@@ -246,3 +246,4 @@
 - [2025-07-16T13:31:05+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-07-16T19:13:57+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-07-18T16:44:10+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-07-23T10:39:16+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
