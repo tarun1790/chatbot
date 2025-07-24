@@ -248,3 +248,4 @@
 - [2025-07-18T16:44:10+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-07-23T10:39:16+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-07-23T11:15:12+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-07-24T10:37:00+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
