@@ -254,3 +254,4 @@
 - [2025-07-28T20:21:28+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-07-29T12:38:58+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-07-29T15:18:32+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-07-30T14:56:41+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
