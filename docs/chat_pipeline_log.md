@@ -259,3 +259,4 @@
 - [2025-08-01T16:19:19+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-08-04T09:02:47+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-08-04T11:18:16+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-08-04T14:44:26+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
