@@ -263,3 +263,4 @@
 - [2025-08-05T10:02:03+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-08-06T13:41:10+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-08-06T20:17:00+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-08-07T14:06:26+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
