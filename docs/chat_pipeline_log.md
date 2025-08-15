@@ -269,3 +269,4 @@
 - [2025-08-08T16:00:22+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-08-11T21:40:55+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-08-13T17:09:55+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
+- [2025-08-15T09:16:37+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
