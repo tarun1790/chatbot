@@ -270,3 +270,4 @@
 - [2025-08-11T21:40:55+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-08-13T17:09:55+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-08-15T09:16:37+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-08-15T12:39:33+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
