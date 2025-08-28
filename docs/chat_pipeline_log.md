@@ -277,3 +277,4 @@
 - [2025-08-22T21:50:00+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-08-25T19:50:45+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-08-26T16:52:24+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-08-28T11:50:55+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
