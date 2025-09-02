@@ -281,3 +281,4 @@
 - [2025-08-29T13:58:09+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-08-29T16:43:07+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-08-29T18:59:06+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-09-02T14:45:50+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
