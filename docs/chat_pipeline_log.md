@@ -293,3 +293,4 @@
 - [2025-09-16T17:05:37+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-09-17T10:18:35+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-09-17T19:07:26+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-09-19T10:33:39+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
