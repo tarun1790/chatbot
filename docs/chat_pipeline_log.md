@@ -297,3 +297,4 @@
 - [2025-09-20T10:10:37+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-09-22T10:23:18+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-09-22T15:29:33+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
+- [2025-09-23T16:19:22+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
