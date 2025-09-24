@@ -299,3 +299,4 @@
 - [2025-09-22T15:29:33+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-09-23T16:19:22+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-09-23T16:44:52+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-09-24T20:14:10+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
