@@ -307,3 +307,4 @@
 - [2025-10-02T12:14:48+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-10-02T13:49:21+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-10-02T15:38:13+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-10-02T18:07:29+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
