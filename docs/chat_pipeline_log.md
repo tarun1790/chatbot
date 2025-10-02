@@ -303,3 +303,4 @@
 - [2025-09-25T10:15:29+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-09-25T10:33:26+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-10-01T19:15:33+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-10-02T12:04:06+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
