@@ -310,3 +310,4 @@
 - [2025-10-02T18:07:29+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-10-03T17:49:08+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-10-06T19:24:50+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-10-10T10:22:45+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
