@@ -312,3 +312,4 @@
 - [2025-10-06T19:24:50+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-10-10T10:22:45+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-10-10T21:43:25+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-10-15T09:26:44+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
