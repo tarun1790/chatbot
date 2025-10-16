@@ -315,3 +315,4 @@
 - [2025-10-15T09:26:44+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-10-15T10:42:28+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-10-15T18:53:11+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-10-16T12:56:21+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
