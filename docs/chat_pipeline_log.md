@@ -319,3 +319,4 @@
 - [2025-10-17T10:14:33+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-10-17T16:41:35+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-10-17T18:49:15+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-10-17T21:57:05+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
