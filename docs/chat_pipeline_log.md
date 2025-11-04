@@ -328,3 +328,4 @@
 - [2025-10-24T11:45:18+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-10-24T13:50:36+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-10-29T20:39:16+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-11-04T20:52:31+05:30] style(theme): enhance conversational bubble typography and contrast styling
