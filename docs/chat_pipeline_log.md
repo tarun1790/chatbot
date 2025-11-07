@@ -331,3 +331,4 @@
 - [2025-11-04T20:52:31+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-11-05T18:11:44+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-11-06T19:55:45+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-11-07T11:39:21+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
