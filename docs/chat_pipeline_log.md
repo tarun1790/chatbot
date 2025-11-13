@@ -334,3 +334,4 @@
 - [2025-11-07T11:39:21+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-11-07T18:43:49+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-11-10T10:52:10+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-11-13T11:25:56+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
