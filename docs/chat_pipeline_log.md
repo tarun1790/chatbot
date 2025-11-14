@@ -335,3 +335,4 @@
 - [2025-11-07T18:43:49+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-11-10T10:52:10+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-11-13T11:25:56+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
+- [2025-11-14T14:53:50+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
