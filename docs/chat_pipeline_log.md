@@ -342,3 +342,4 @@
 - [2025-11-19T21:24:50+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-11-20T10:39:56+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-11-20T15:32:46+05:30] style(theme): enhance conversational bubble typography and contrast styling
+- [2025-11-20T18:09:09+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
