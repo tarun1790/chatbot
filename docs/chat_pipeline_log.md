@@ -345,3 +345,4 @@
 - [2025-11-20T18:09:09+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-11-21T10:06:20+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-11-21T11:01:02+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
+- [2025-11-21T17:31:25+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
