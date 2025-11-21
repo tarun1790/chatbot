@@ -344,3 +344,4 @@
 - [2025-11-20T15:32:46+05:30] style(theme): enhance conversational bubble typography and contrast styling
 - [2025-11-20T18:09:09+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-11-21T10:06:20+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-11-21T11:01:02+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
