@@ -347,3 +347,4 @@
 - [2025-11-21T11:01:02+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-11-21T17:31:25+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-11-24T13:09:02+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-11-26T13:17:22+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
