@@ -353,3 +353,4 @@
 - [2025-11-28T19:41:14+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-11-28T20:02:12+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-12-01T10:23:56+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
+- [2025-12-01T13:37:38+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
