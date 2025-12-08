@@ -363,3 +363,4 @@
 - [2025-12-06T13:51:42+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-12-07T11:54:23+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-12-08T10:12:49+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
+- [2025-12-08T11:34:35+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
