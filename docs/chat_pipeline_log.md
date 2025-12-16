@@ -369,3 +369,4 @@
 - [2025-12-11T18:11:33+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
 - [2025-12-14T13:52:03+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-12-15T12:37:02+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-12-16T13:48:01+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
