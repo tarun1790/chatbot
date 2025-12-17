@@ -371,3 +371,4 @@
 - [2025-12-15T12:37:02+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-12-16T13:48:01+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
 - [2025-12-16T15:40:02+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
+- [2025-12-17T11:42:57+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
