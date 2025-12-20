@@ -374,3 +374,4 @@
 - [2025-12-17T11:42:57+05:30] docs(api): document streaming endpoint schema and WebSocket fallback protocols
 - [2025-12-18T14:50:55+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-12-19T13:00:19+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-12-20T17:56:59+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
