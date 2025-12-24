@@ -380,3 +380,4 @@
 - [2025-12-23T16:54:35+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-12-23T18:55:46+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-12-24T15:45:28+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
+- [2025-12-24T18:48:41+05:30] refactor(streaming): optimize Server-Sent Events (SSE) token delivery stream
