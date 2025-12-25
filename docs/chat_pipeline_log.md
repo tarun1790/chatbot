@@ -384,3 +384,4 @@
 - [2025-12-24T21:25:44+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-12-25T10:27:43+05:30] perf(cache): implement LRU memory caching for frequent prompt completions
 - [2025-12-25T12:48:20+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
+- [2025-12-25T13:24:10+05:30] feat(tokens): add real-time token usage counter and latency telemetry tracker
