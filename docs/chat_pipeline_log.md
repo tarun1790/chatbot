@@ -389,3 +389,4 @@
 - [2025-12-25T20:06:48+05:30] style(ui): polish collapsible RAG context inspector and citations drawer
 - [2025-12-25T21:02:52+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-12-25T21:49:30+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-12-26T09:16:25+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
