@@ -395,3 +395,4 @@
 - [2025-12-29T13:44:44+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
 - [2025-12-30T10:57:15+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
 - [2025-12-30T11:18:45+05:30] fix(scroll): fix auto-scroll behavior during high-speed markdown rendering
+- [2025-12-30T15:30:48+05:30] feat(rag): add dynamic retrieval-augmented context stage with vector embeddings
