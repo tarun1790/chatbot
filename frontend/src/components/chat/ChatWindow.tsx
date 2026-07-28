@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Send, Database, Loader2, Play, Code2, LayoutList } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useRef, useEffect } from 'react';
+import { Send, Database, Loader2, Code2, LayoutList } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 type StreamStage = 'understanding' | 'schema' | 'planning' | 'generating' | 'validating' | 'executing' | 'formatting' | 'complete' | 'error';
 
@@ -40,46 +40,38 @@ export default function ChatWindow() {
     setMessages(prev => [...prev, { id: assistantMsgId, role: 'assistant', content: '', stage: 'understanding', stageMessage: 'Initializing pipeline...' }]);
 
     try {
-      // Initiate SSE Stream to backend
-      const response = await fetch('http://localhost:8000/api/v1/chat/stream', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: input, session_id: "demo-session" })
-      });
+      // Simulate backend SSE stream locally for GitHub pages demo
+      const stages = [
+        { stage: 'understanding', message: 'Analyzing question intent...' },
+        { stage: 'schema', message: 'Finding relevant tables and columns...' },
+        { stage: 'planning', message: 'Creating query execution plan...' },
+        { stage: 'generating', message: 'Generating optimized SQL...' },
+        { stage: 'validating', message: 'Validating SQL against security policies...' },
+        { stage: 'executing', message: 'Running secure query on database...' },
+        { stage: 'formatting', message: 'Formatting results and analyzing...' }
+      ];
 
-      if (!response.body) throw new Error("No response body");
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-
-      while (true) {
-        const { value, done } = await reader.read();
-        if (done) break;
-        
-        const chunk = decoder.decode(value);
-        const lines = chunk.split('\n').filter(line => line.trim() !== '');
-        
-        for (const line of lines) {
-          if (line.startsWith('event: ')) {
-            // handle event type
-          } else if (line.startsWith('data: ')) {
-            const dataStr = line.substring(6);
-            try {
-              const data = JSON.parse(dataStr);
-              if (data.stage === 'complete') {
-                 setMessages(prev => prev.map(m => 
-                  m.id === assistantMsgId ? { ...m, content: data.answer, sql: data.sql, data: data.data, stage: 'complete' } : m
-                ));
-              } else {
-                 setMessages(prev => prev.map(m => 
-                  m.id === assistantMsgId ? { ...m, stage: data.stage, stageMessage: data.message } : m
-                ));
-              }
-            } catch (e) {
-              console.error("Error parsing SSE data", e);
-            }
-          }
-        }
+      for (const step of stages) {
+        setMessages(prev => prev.map(m => 
+          m.id === assistantMsgId ? { ...m, stage: step.stage as StreamStage, stageMessage: step.message } : m
+        ));
+        await new Promise(r => setTimeout(r, 600)); // Simulate delay
       }
+
+      // Final complete response
+      const finalResponse = {
+        answer: `Here is the data for your request: '${input}'`,
+        sql: "SELECT \n  c.city,\n  SUM(o.amount) as total_revenue\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nGROUP BY c.city\nORDER BY total_revenue DESC\nLIMIT 10;",
+        data: [
+          { city: "Hyderabad", total_revenue: "$450,200" },
+          { city: "Bangalore", total_revenue: "$380,500" },
+          { city: "Mumbai", total_revenue: "$310,100" }
+        ]
+      };
+      
+      setMessages(prev => prev.map(m => 
+        m.id === assistantMsgId ? { ...m, content: finalResponse.answer, sql: finalResponse.sql, data: finalResponse.data, stage: 'complete' } : m
+      ));
     } catch (error) {
       setMessages(prev => prev.map(m => 
         m.id === assistantMsgId ? { ...m, stage: 'error', stageMessage: 'Pipeline failed to execute.' } : m
