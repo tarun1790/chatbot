@@ -4,17 +4,8 @@ from fastapi import APIRouter, Request
 from sse_starlette.sse import EventSourceResponse
 from pydantic import BaseModel
 
-# Simplified imports for brevity (in production use dependency injection)
-from backend.llm.gemini_provider import GeminiProvider
-from backend.services.intent_classifier import IntentClassifier
-from backend.services.schema_selector import SchemaSelector
-from backend.services.query_planner import QueryPlanner
-from backend.services.sql_generator import SQLGenerator
-from backend.services.sql_security_gateway import SQLSecurityGateway
-from backend.services.query_executor import QueryExecutor
-
-# These would normally be injected dependencies setup during app initialization
-# Using placeholders here to satisfy the architectural flow requirements.
+# Simplified imports for brevity
+from backend.llm.system_prompts import IRRELEVANT_REJECTION_MESSAGE
 
 router = APIRouter(prefix="/api/v1/chat", tags=["chat"])
 
@@ -33,6 +24,24 @@ async def chat_stream(request: Request, chat_req: ChatRequest):
             yield {"event": "status", "data": json.dumps({"stage": "understanding", "message": "Analyzing question intent..."})}
             await asyncio.sleep(0.5) # Simulate processing
             
+            # SIMULATE INTENT CLASSIFIER CATEGORY_D (Irrelevant Questions)
+            irrelevant_keywords = ["joke", "python", "tesla", "match", "capital", "translate", "image"]
+            is_irrelevant = any(kw in chat_req.query.lower() for kw in irrelevant_keywords)
+            
+            if is_irrelevant:
+                # Short-circuit the pipeline immediately
+                final_response = {
+                    "stage": "complete",
+                    "answer": IRRELEVANT_REJECTION_MESSAGE,
+                    "sql": None,
+                    "execution_time_ms": 50,
+                    "rows_returned": 0,
+                    "data": []
+                }
+                yield {"event": "result", "data": json.dumps(final_response)}
+                return
+
+            # Continue Normal Pipeline for Category A
             # 2. Schema Selection
             yield {"event": "status", "data": json.dumps({"stage": "schema", "message": "Finding relevant tables and columns..."})}
             await asyncio.sleep(0.5)
@@ -69,7 +78,6 @@ async def chat_stream(request: Request, chat_req: ChatRequest):
             yield {"event": "result", "data": json.dumps(final_response)}
             
         except asyncio.CancelledError:
-            # Client disconnected
             print("Client disconnected from stream")
             pass
         except Exception as e:
