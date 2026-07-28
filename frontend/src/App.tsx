@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ChatWindow from './components/chat/ChatWindow';
+import Overview from './components/dashboard/Overview';
+import SchemaExplorer from './components/schema/SchemaExplorer';
+import DatabaseHealth from './components/health/DatabaseHealth';
 
 function AppShell({ children }: { children: React.ReactNode }) {
   return (
@@ -35,10 +38,10 @@ function App() {
     <BrowserRouter>
       <AppShell>
         <Routes>
-          <Route path="/" element={<div className="p-8"><h2 className="text-3xl font-heading font-bold mb-4">Dashboard Overview</h2><div className="grid grid-cols-3 gap-6"><div className="glass-panel p-6 rounded-xl"><h3>Total Queries</h3><p className="text-3xl text-[#D4AF37] mt-2">1,248</p></div></div></div>} />
+          <Route path="/" element={<Overview />} />
           <Route path="/chat" element={<ChatWindow />} />
-          <Route path="/schema" element={<div className="p-8">Schema Explorer Content</div>} />
-          <Route path="/health" element={<div className="p-8">Database Health Content</div>} />
+          <Route path="/schema" element={<SchemaExplorer />} />
+          <Route path="/health" element={<DatabaseHealth />} />
         </Routes>
       </AppShell>
     </BrowserRouter>
