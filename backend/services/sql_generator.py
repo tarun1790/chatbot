@@ -1,24 +1,15 @@
 from typing import Dict, Any
 from backend.llm.base_provider import BaseLLMProvider
+from backend.llm.system_prompts import MASTER_SYSTEM_PROMPT, SQL_GENERATOR_PROMPT
 
 class SQLGenerator:
     def __init__(self, llm_provider: BaseLLMProvider):
         self.llm = llm_provider
-        self.system_prompt = """
-        You are an expert SQL Generator.
-        Given a structured query plan and the relevant database schema, generate a safe, optimized, ANSI-compliant MySQL query.
-        
-        Rules:
-        1. Only generate SELECT queries. NEVER generate INSERT, UPDATE, DELETE, or DROP.
-        2. Use the provided query plan structure as a blueprint.
-        3. Ensure table aliases are used correctly.
-        4. Do NOT include markdown formatting (like ```sql) in the output, JUST the raw SQL.
-        5. ALWAYS add a LIMIT if the query could return many rows.
-        """
+        self.system_prompt = f"{MASTER_SYSTEM_PROMPT}\n\n{SQL_GENERATOR_PROMPT}\n\nDO NOT include markdown formatting (like ```sql) in the output, JUST the raw SQL."
 
     async def generate_sql(self, query_plan: Dict[str, Any], compressed_schema: Dict[str, Any]) -> str:
         """Generates raw SQL from the query plan."""
-        prompt = f"Query Plan:\n{query_plan}\n\nSchema Context:\n{compressed_schema}\n\nGenerate the SQL query now:"
+        prompt = f"Query Plan:\n{query_plan}\n\nSchema Context:\n{compressed_schema}\n\nGenerate the ANSI-compliant read-only SQL query now:"
         try:
             sql = await self.llm.generate(
                 prompt=prompt,
