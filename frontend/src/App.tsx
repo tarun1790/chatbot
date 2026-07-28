@@ -8,8 +8,10 @@ function AppShell({ children }: { children: React.ReactNode }) {
       {/* Sidebar */}
       <aside className="w-64 glass-panel border-r border-[#2A2A2A] p-4 flex flex-col gap-4">
         <div className="flex items-center gap-3 mb-8">
-          <div className="w-8 h-8 rounded-full bg-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.4)]"></div>
-          <h1 className="text-xl font-heading font-bold text-[#FAFAFA]">Enterprise SQL</h1>
+          <div className="w-8 h-8 rounded-full bg-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <h1 className="text-xl font-heading font-bold text-[#FAFAFA]">Chat Bot</h1>
         </div>
         
         <nav className="flex flex-col gap-2">
