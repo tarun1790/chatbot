@@ -1,8 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
-import { Send, Database, Loader2, Code2, LayoutList } from 'lucide-react';
+import { Send, Database, Loader2, Code2, LayoutList, Cpu, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-type StreamStage = 'understanding' | 'schema' | 'planning' | 'generating' | 'validating' | 'executing' | 'formatting' | 'complete' | 'error';
+type StreamStage = 'understanding' | 'rag_retrieval' | 'schema' | 'planning' | 'generating' | 'validating' | 'executing' | 'formatting' | 'complete' | 'error';
+
+interface RagContext {
+  schema_matches?: Array<{ table: string; column?: string; similarity_score: number; description?: string }>;
+  golden_sql_matches?: Array<{ question: string; similarity_score: number; sql: string }>;
+  resolved_entities?: Array<{ input: string; resolved_value: string; similarity_score: number; field?: string }>;
+}
 
 interface Message {
   id: string;
@@ -12,12 +18,14 @@ interface Message {
   stageMessage?: string;
   sql?: string;
   data?: any[];
+  rag_context?: RagContext;
 }
 
 export default function ChatWindow() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
+  const [showRagInsights, setShowRagInsights] = useState<Record<string, boolean>>({});
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -27,6 +35,10 @@ export default function ChatWindow() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  const toggleRagPanel = (msgId: string) => {
+    setShowRagInsights(prev => ({ ...prev, [msgId]: !prev[msgId] }));
+  };
 
   const handleSend = async () => {
     if (!input.trim() || isStreaming) return;
@@ -40,14 +52,32 @@ export default function ChatWindow() {
     setMessages(prev => [...prev, { id: assistantMsgId, role: 'assistant', content: '', stage: 'understanding', stageMessage: 'Initializing pipeline...' }]);
 
     try {
-      // Simulate backend SSE stream locally for GitHub pages demo
+      // Check for irrelevant queries
+      const irrelevantKeywords = ["joke", "python", "tesla", "match", "capital", "translate", "image"];
+      const isIrrelevant = irrelevantKeywords.some(kw => input.toLowerCase().includes(kw));
+
+      if (isIrrelevant) {
+        await new Promise(r => setTimeout(r, 600));
+        setMessages(prev => prev.map(m => 
+          m.id === assistantMsgId ? { 
+            ...m, 
+            content: "I'm designed specifically to answer questions using your company's connected database. Your current question cannot be answered from the available database because it is not related to the stored business data.\n\nPlease ask a question about your organization's data, such as employees, customers, products, orders, inventory, finance, or sales.",
+            stage: 'complete' 
+          } : m
+        ));
+        setIsStreaming(false);
+        return;
+      }
+
+      // Simulated RAG + Text-to-SQL Pipeline Stages
       const stages = [
         { stage: 'understanding', message: 'Analyzing question intent...' },
+        { stage: 'rag_retrieval', message: 'Retrieving semantic schema, golden SQL examples, and entity matches...' },
         { stage: 'schema', message: 'Finding relevant tables and columns...' },
         { stage: 'planning', message: 'Creating query execution plan...' },
-        { stage: 'generating', message: 'Generating optimized SQL...' },
-        { stage: 'validating', message: 'Validating SQL against security policies...' },
-        { stage: 'executing', message: 'Running secure query on database...' },
+        { stage: 'generating', message: 'Generating optimized SQL using Golden Examples...' },
+        { stage: 'validating', message: 'Validating SQL against AST security policies...' },
+        { stage: 'executing', message: 'Running secure read-only query on database...' },
         { stage: 'formatting', message: 'Formatting results and analyzing...' }
       ];
 
@@ -55,22 +85,41 @@ export default function ChatWindow() {
         setMessages(prev => prev.map(m => 
           m.id === assistantMsgId ? { ...m, stage: step.stage as StreamStage, stageMessage: step.message } : m
         ));
-        await new Promise(r => setTimeout(r, 600)); // Simulate delay
+        await new Promise(r => setTimeout(r, 450));
       }
 
-      // Final complete response
+      // Simulated RAG Augmented Response
       const finalResponse = {
-        answer: `Here is the data for your request: '${input}'`,
-        sql: "SELECT \n  c.city,\n  SUM(o.amount) as total_revenue\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nGROUP BY c.city\nORDER BY total_revenue DESC\nLIMIT 10;",
+        answer: `Here is the retrieved data for your query: '${input}'`,
+        sql: "SELECT \n  c.name AS customer_name,\n  SUM(o.amount) as total_revenue\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nGROUP BY c.name\nORDER BY total_revenue DESC\nLIMIT 10;",
         data: [
-          { city: "Hyderabad", total_revenue: "$450,200" },
-          { city: "Bangalore", total_revenue: "$380,500" },
-          { city: "Mumbai", total_revenue: "$310,100" }
-        ]
+          { customer_name: "Acme Corp", total_revenue: "$45,200.00" },
+          { customer_name: "Global Tech", total_revenue: "$38,150.00" },
+          { customer_name: "Apex Innovations", total_revenue: "$29,400.00" }
+        ],
+        rag_context: {
+          schema_matches: [
+            { table: "orders", column: "amount", similarity_score: 0.91, description: "Order sales revenue value" },
+            { table: "customers", column: "name", similarity_score: 0.87, description: "Customer name" }
+          ],
+          golden_sql_matches: [
+            { question: "Show top revenue customers", similarity_score: 0.93, sql: "SELECT c.name, SUM(o.amount)..." }
+          ],
+          resolved_entities: [
+            { input: "Hyd", resolved_value: "Hyderabad", similarity_score: 0.95, field: "customers.city" }
+          ]
+        }
       };
       
       setMessages(prev => prev.map(m => 
-        m.id === assistantMsgId ? { ...m, content: finalResponse.answer, sql: finalResponse.sql, data: finalResponse.data, stage: 'complete' } : m
+        m.id === assistantMsgId ? { 
+          ...m, 
+          content: finalResponse.answer, 
+          sql: finalResponse.sql, 
+          data: finalResponse.data, 
+          rag_context: finalResponse.rag_context,
+          stage: 'complete' 
+        } : m
       ));
     } catch (error) {
       setMessages(prev => prev.map(m => 
@@ -87,7 +136,7 @@ export default function ChatWindow() {
       <header className="px-6 py-4 border-b border-[#2A2A2A] glass-panel z-10 flex justify-between items-center">
         <div>
           <h2 className="text-xl font-heading font-semibold text-[#FAFAFA]">AI Data Analyst</h2>
-          <p className="text-sm text-gray-400">Query your enterprise database in natural language</p>
+          <p className="text-sm text-gray-400">Hybrid RAG + Text-to-SQL Enterprise Retrieval Engine</p>
         </div>
         <div className="flex items-center gap-2 text-sm text-[#D4AF37] bg-[#171717] px-3 py-1.5 rounded-full border border-[#2A2A2A]">
           <Database size={14} /> MySQL Connected
@@ -113,8 +162,78 @@ export default function ChatWindow() {
               
               {msg.role === 'assistant' && msg.stage === 'complete' && (
                 <div className="flex flex-col gap-4 w-full">
-                  <p className="text-[#FAFAFA] leading-relaxed">{msg.content}</p>
+                  <p className="text-[#FAFAFA] leading-relaxed whitespace-pre-line">{msg.content}</p>
                   
+                  {/* Collapsible RAG Context Insights Panel */}
+                  {msg.rag_context && (
+                    <div className="bg-[#050505] border border-[#2A2A2A] rounded-lg overflow-hidden">
+                      <button 
+                        onClick={() => toggleRagPanel(msg.id)}
+                        className="w-full flex items-center justify-between bg-[#111] px-4 py-2 text-xs font-mono text-[#D4AF37] hover:bg-[#161616] transition-colors"
+                      >
+                        <span className="flex items-center gap-2">
+                          <Sparkles size={14} /> RAG CONTEXT INSIGHTS (Vector Similarity Matches)
+                        </span>
+                        {showRagInsights[msg.id] ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                      </button>
+
+                      {showRagInsights[msg.id] && (
+                        <div className="p-4 space-y-4 text-xs font-mono text-gray-300 bg-[#0A0A0A] border-t border-[#2A2A2A]">
+                          {/* Schema Matches */}
+                          {msg.rag_context.schema_matches && msg.rag_context.schema_matches.length > 0 && (
+                            <div>
+                              <div className="text-gray-400 font-semibold mb-1 uppercase tracking-wider flex items-center gap-1">
+                                <Cpu size={12} className="text-[#D4AF37]" /> Schema Vector Matches:
+                              </div>
+                              <ul className="space-y-1 pl-4">
+                                {msg.rag_context.schema_matches.map((sm, i) => (
+                                  <li key={i} className="flex justify-between">
+                                    <span>• {sm.table}{sm.column ? `.${sm.column}` : ''} {sm.description ? `(${sm.description})` : ''}</span>
+                                    <span className="text-[#D4AF37] font-bold">score: {sm.similarity_score}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          {/* Golden SQL Examples */}
+                          {msg.rag_context.golden_sql_matches && msg.rag_context.golden_sql_matches.length > 0 && (
+                            <div>
+                              <div className="text-gray-400 font-semibold mb-1 uppercase tracking-wider flex items-center gap-1">
+                                <Code2 size={12} className="text-[#D4AF37]" /> Golden SQL Few-Shot Matches:
+                              </div>
+                              <ul className="space-y-1 pl-4">
+                                {msg.rag_context.golden_sql_matches.map((gm, i) => (
+                                  <li key={i} className="flex justify-between">
+                                    <span>• "{gm.question}"</span>
+                                    <span className="text-[#D4AF37] font-bold">score: {gm.similarity_score}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          {/* Entity Matches */}
+                          {msg.rag_context.resolved_entities && msg.rag_context.resolved_entities.length > 0 && (
+                            <div>
+                              <div className="text-gray-400 font-semibold mb-1 uppercase tracking-wider flex items-center gap-1">
+                                <Database size={12} className="text-[#D4AF37]" /> Resolved Entity Matches:
+                              </div>
+                              <ul className="space-y-1 pl-4">
+                                {msg.rag_context.resolved_entities.map((em, i) => (
+                                  <li key={i} className="flex justify-between">
+                                    <span>• '{em.input}' → '{em.resolved_value}' {em.field ? `(${em.field})` : ''}</span>
+                                    <span className="text-[#D4AF37] font-bold">score: {em.similarity_score}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
                   {msg.sql && (
                     <div className="bg-[#050505] border border-[#2A2A2A] rounded-lg overflow-hidden">
                       <div className="flex items-center justify-between bg-[#111] px-4 py-2 border-b border-[#2A2A2A]">
@@ -167,7 +286,7 @@ export default function ChatWindow() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-            placeholder="Ask a question about your data... (e.g. 'Show total sales for Q3')"
+            placeholder="Ask a question about your data... (e.g. 'Show top revenue customers')"
             className="w-full glass-panel bg-[#111] text-[#FAFAFA] rounded-full py-4 pl-6 pr-16 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all placeholder-gray-500"
             disabled={isStreaming}
           />
