@@ -4,7 +4,7 @@ from typing import Dict, Any
 
 class SQLSecurityGateway:
     def __init__(self):
-        self.allowed_operations = {"select", "with", "show", "describe", "explain"}
+        self.allowed_operations = {"select", "with", "show", "describe", "explain", "union"}
         self.blocked_operations = {
             "insert", "update", "delete", "drop", "alter", "create", 
             "truncate", "grant", "revoke", "call", "merge", "execute"
@@ -36,15 +36,21 @@ class SQLSecurityGateway:
             if root_node_type not in self.allowed_operations:
                 return {
                     "is_safe": False, 
-                    "violations": f"Operation '{root_node_type}' is not allowed. Only SELECT is permitted.",
+                    "violations": [f"Operation '{root_node_type}' is not allowed. Only SELECT is permitted."],
                     "sanitized_sql": None
                 }
+
+            # Check for any blocked operations anywhere within the AST
+            for node in expression.walk():
+                if node.key in self.blocked_operations:
+                    return {
+                        "is_safe": False,
+                        "violations": [f"Blocked operation '{node.key}' detected inside query."],
+                        "sanitized_sql": None
+                    }
                 
-            # Perform additional security checks on the AST
-            # (e.g., check for dangerous functions, ensure LIMIT is present)
-            
-            # Ensure LIMIT is present for SELECT queries (naive check for now, can be expanded)
-            if root_node_type == "select" and not expression.args.get("limit"):
+            # Ensure LIMIT is present for SELECT / UNION / WITH queries
+            if root_node_type in ("select", "union", "with") and not expression.args.get("limit"):
                 # Automatically append LIMIT if missing
                 expression = expression.limit(1000)
                 
