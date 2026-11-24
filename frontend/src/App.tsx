@@ -35,7 +35,7 @@ function AppShell({ children }: { children: React.ReactNode }) {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <AppShell>
         <Routes>
           <Route path="/" element={<Overview />} />

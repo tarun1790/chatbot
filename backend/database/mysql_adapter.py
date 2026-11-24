@@ -43,7 +43,9 @@ class MySQLAdapter(BaseDatabaseAdapter):
         return tables
 
     async def get_table_schema(self, table_name: str) -> Dict[str, Any]:
-        query = f"DESCRIBE {table_name}"
+        # Escape table identifier to prevent injection
+        sanitized_table = table_name.replace("`", "")
+        query = f"DESCRIBE `{sanitized_table}`"
         columns = await self.execute_query(query)
         return {"columns": columns}
 
@@ -57,6 +59,6 @@ class MySQLAdapter(BaseDatabaseAdapter):
             FROM 
                 INFORMATION_SCHEMA.KEY_COLUMN_USAGE 
             WHERE 
-                REFERENCED_TABLE_SCHEMA = %s;
+                REFERENCED_TABLE_SCHEMA = %(db_name)s;
         """
         return await self.execute_query(query, {"db_name": self.db_name})
